@@ -3,6 +3,7 @@ import { flights as flightsData } from "../flights.json";
 import { useLoaderData } from "@remix-run/react";
 import { createColumnHelper } from "@tanstack/react-table";
 import { FlightsTable } from "~/components/flights-table/flights-table";
+import { Card } from "~/components/card/card";
 
 export const meta: MetaFunction = () => {
   return [
@@ -49,13 +50,11 @@ export default function Index() {
 
   return (
     <main>
-      <div className="card-container center">
-        <section>
-          <h2 className="card-title">Flight departure information</h2>
-
+      <section>
+        <Card title="Flight departure information">
           <FlightsTable columns={columns} flights={flights} />
-        </section>
-      </div>
+        </Card>
+      </section>
     </main>
   );
 }

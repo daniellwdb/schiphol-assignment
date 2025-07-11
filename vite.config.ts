@@ -9,16 +9,24 @@ declare module "@remix-run/node" {
 }
 
 export default defineConfig({
+  test: {
+    globals: true,
+    environment: "jsdom",
+    include: ["**/*.test.tsx"],
+  },
   plugins: [
-    remix({
-      future: {
-        v3_fetcherPersist: true,
-        v3_relativeSplatPath: true,
-        v3_throwAbortReason: true,
-        v3_singleFetch: true,
-        v3_lazyRouteDiscovery: true,
-      },
-    }),
+    process.env.NODE_ENV === "test"
+      ? null
+      : remix({
+          future: {
+            v3_fetcherPersist: true,
+            v3_relativeSplatPath: true,
+            v3_throwAbortReason: true,
+            v3_singleFetch: true,
+            v3_lazyRouteDiscovery: true,
+          },
+          ignoredRouteFiles: ["**/*.css"],
+        }),
     tsconfigPaths(),
   ],
 });

@@ -1,0 +1,74 @@
+.flights-search-input {
+  flex-grow: 1;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--grey-broken);
+  border-radius: 0.375rem;
+  color: var(--schiphol-blue);
+}
+
+.flights-search-input::placeholder {
+  color: var(--grey-storm);
+}
+
+.flights-search-input:focus {
+  outline: none;
+  border-color: var(--afternoon-blue);
+}
+
+table {
+  min-width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  border: 1px solid var(--grey-few);
+}
+
+table thead {
+  background-color: var(--afternoon-blue);
+}
+
+table th {
+  padding: 0.75rem 1.5rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--white);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+table th:first-child {
+  border-top-left-radius: 0.5rem;
+}
+
+table th:last-child {
+  border-top-right-radius: 0.5rem;
+}
+
+table tbody {
+  background-color: var(--white);
+  color: var(--schiphol-blue);
+}
+
+table tr {
+  border-bottom: 1px solid var(--grey-scattered);
+}
+
+table tr:last-child {
+  border-bottom: none;
+}
+
+table tr:nth-child(even) {
+  background-color: var(--grey-few);
+}
+
+table td {
+  padding: 1rem 1.5rem;
+  white-space: nowrap;
+  font-size: 0.875rem;
+}
+
+table td:first-child {
+  font-weight: 500;
+}
