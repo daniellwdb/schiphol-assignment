@@ -17,7 +17,7 @@ Please don't spend more than that unless you're having fun and want to show off 
 - Make it look nice. Make use of the provided colors. How you want to implement them is entirely your choice ;)
 - Your application should treat the contents of `flights.json` as the output of an API endpoint.
   It should load this asynchronously using XHR or Fetch API and should not require a page reload when the user changes their input.
-- Make sure the results are sortable. The filtered flight data should be sortable on date and (expected) time. Initial expected sorting is early to late.
+- Make sure the results are sortable. The filtered flight data should be sortable on date and (expected) time. Initial expected sorting is early to late. 
 
 ## Submission:
 

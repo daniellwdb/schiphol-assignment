@@ -9,10 +9,12 @@ import type { LinksFunction } from "@remix-run/node";
 
 import colorStylesHref from "./colors.css?url";
 import resetStylesHref from "./reset.css?url";
+import appStylesHref from "./app.css?url";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: resetStylesHref },
   { rel: "stylesheet", href: colorStylesHref },
+  { rel: "stylesheet", href: appStylesHref },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",
