@@ -7,9 +7,14 @@ import {
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
 
-import colorStylesHref from "./colors.css?url";
-import resetStylesHref from "./reset.css?url";
-import appStylesHref from "./app.css?url";
+import colorStylesHref from "./styles/colors.css?url";
+import resetStylesHref from "./styles/reset.css?url";
+import appStylesHref from "./styles/app.css?url";
+import { ReactNode } from "react";
+
+type LayoutProps = {
+  children: ReactNode;
+};
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: resetStylesHref },
@@ -27,7 +32,7 @@ export const links: LinksFunction = () => [
   },
 ];
 
-export function Layout({ children }: { children: React.ReactNode }) {
+export function Layout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <head>

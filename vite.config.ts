@@ -13,6 +13,7 @@ export default defineConfig({
     globals: true,
     environment: "jsdom",
     include: ["**/*.test.tsx"],
+    setupFiles: ["./setupTests.ts"],
   },
   plugins: [
     process.env.NODE_ENV === "test"
@@ -25,7 +26,7 @@ export default defineConfig({
             v3_singleFetch: true,
             v3_lazyRouteDiscovery: true,
           },
-          ignoredRouteFiles: ["**/*.css"],
+          ignoredRouteFiles: ["**/*.css", "**/*.test.tsx"],
         }),
     tsconfigPaths(),
   ],

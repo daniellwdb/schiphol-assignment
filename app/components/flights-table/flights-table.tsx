@@ -9,8 +9,8 @@ import {
 } from "@tanstack/react-table";
 import type { flights } from "../../flights.json";
 import { useState } from "react";
-import { fuzzyFilter } from "lib/util/table-filters";
 import { DebouncedInput } from "../debounced-input";
+import { fuzzyFilter } from "lib/shared/util/filters/fuzzy-filter";
 
 type FlightsTableProps = {
   flights: typeof flights;
@@ -55,6 +55,7 @@ export function FlightsTable({
     <>
       <div className="center">
         <DebouncedInput
+          name="flights-search-input"
           className="flights-search-input"
           type="text"
           value={filterValue ?? ""}
