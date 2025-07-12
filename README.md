@@ -9,6 +9,7 @@ If I had more time I would:
 - Add status indicators in the table (delayed, on time etc.) using the provided colours in `colors.css` depending on expected / original departure time.
 - Create a more realistic backend and use loading indicators in the frontend.
 - Have some integration test with either react-testing-library or cypress.
+- Not rely on the loader return type in the index file inside components and create a decoupled flights type instead.
 
 # Assignment
 
